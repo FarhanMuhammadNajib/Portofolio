@@ -55,26 +55,21 @@
       body: formData,
       headers: {'X-Requested-With': 'XMLHttpRequest'}
     })
-    .then(response => {
-      if( response.ok ) {
-        return response.text();
-      } else {
-        throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
-      }
-    })
+    .then(response => response.json())  // Mengambil respons dalam format JSON
     .then(data => {
-      thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
-        thisForm.querySelector('.sent-message').classList.add('d-block');
-        thisForm.reset(); 
-      } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
-      }
+        thisForm.querySelector('.loading').classList.remove('d-block');
+        if (data.ok) {
+            thisForm.querySelector('.sent-message').classList.add('d-block');
+            thisForm.reset();  // Menghapus isian formulir
+            // Tambahkan kode di sini untuk menanggapi respons sukses sesuai kebutuhan Anda
+        } else {
+            displayError(thisForm, data.next);  // Menampilkan pesan respons yang tidak berhasil
+        }
     })
     .catch((error) => {
-      displayError(thisForm, error);
+        displayError(thisForm, error);
     });
-  }
+}
 
   function displayError(thisForm, error) {
     thisForm.querySelector('.loading').classList.remove('d-block');
