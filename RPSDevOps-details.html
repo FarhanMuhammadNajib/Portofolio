@@ -75,6 +75,7 @@
             <div class="portfolio-info">
               <h3>Project information</h3>
               <ul>
+                <li><strong>Name</strong>: Rock, Paper, Scissors Recognition Web Application Using DevOps</li>
                 <li><strong>Category</strong>: DevOps</li>
                 <li><strong>Client</strong>: Personal Project</li>
                 <li><strong>Project Duration</strong>: One week</li>
@@ -85,21 +86,25 @@
             <div class="col-lg-12">
               <div class="portfolio-description">
                 <h2>Project Detail</h2>
-                <p>This project is a web application that can recognize the shape of rock, paper, or scissors hand gesture from the image uploaded by the user. This project uses the following technologies:</p>
+                <p>I developed a web application that can recognize whether the image uploaded by the user is shaped like a rock, paper, or scissors. I used state-of-the-art deep learning techniques with the help of TensorFlow and Keras to create a model that can classify images with high accuracy. I also used Flask to create a web interface that is user-friendly and appealing.</p>
+
+                <p>I used Oracle Cloud Infrastructure as the provider of the server to run my web application. I chose Oracle Cloud because it offers high performance, security, and scalability. I can also manage my cloud resources easily and cost-effectively.</p>
+            
+                <h2>Key Points of My Project</h2>
                 <ul>
-                  <li>Deep learning model trained with the Rock Paper Scissors dataset from Kaggle.</li>
-                  <li>Flask as the web framework and PIL as the library for image processing.</li>
-                  <li>Oracle Cloud Infrastructure as the cloud provider and Docker as the tool for deploying the application.</li>
-                  <li>GitHub Actions as the tool for creating a CI/CD pipeline that builds and pushes the Docker image to Docker Hub.</li>
+                    <li>I used GitHub Actions as a tool to perform CI/CD, which is an automated process to build, test, and deploy my web application to a Docker server.</li>
+                    <li>I created a YAML file that defines the steps that GitHub Actions must perform to run my CI/CD pipeline. This file consists of two parts: Docker and Deploy.
+                        <ul>
+                            <li>The Docker part is responsible for logging in to Docker Hub, where I store the Docker image of my web application. Then, this part will build the Docker image from my source code and push it to Docker Hub.</li>
+                            <li>The Deploy part depends on the Docker part and is responsible for logging into the Docker server with SSH, deleting the old image and container, running a new container from the latest image, and setting up the firewall to allow access to port 1000.</li>
+                        </ul>
+                    </li>
+                    <li>My CI/CD pipeline will run every time I do a push or pull request to the main branch on GitHub, or every time I trigger it manually from GitHub.</li>
+                    <li>I used some useful Python libraries, such as PIL for processing images, TensorFlow and Keras for creating and training deep learning models, and Flask for creating web applications.</li>
                 </ul>
-                <p>The workflow of this project is as follows:</p>
-                <ol>
-                  <li>The user uploads an image that contains the shape of rock, paper, or scissors to the web application.</li>
-                  <li>The web application sends the image to the deep learning model that runs on the OCI server.</li>
-                  <li>The deep learning model recognizes the shape of rock, paper, or scissors hand gesture from the image and sends the result to the web application.</li>
-                  <li>The web application displays the prediction result to the user.</li>
-                </ol>
-                <p>The purpose of this project is to demonstrate my skills in creating a web application based on deep learning and using cloud and Docker technologies. This project also shows my creativity and innovation in developing a fun and useful application.</p>
+            
+                <p>With this project, I demonstrate that I can develop a web application that uses deep learning and DevOps technologies. I hope this project can be my portfolio to showcase my skills in this field.</p>
+            
               </div>
           </div>
 
