@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - Customer Churn</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/NeuranNet.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/NeuranNetSMOTE-Ensamble.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/NeuranNetSMOTE.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Name</strong>: Customer Churn Prediction</li>
+                <li><strong>Category</strong>: Machine Learning</li>
+                <li><strong>Client</strong>: Personal Project</li>
+                <li><strong>Project Duration</strong>: 2 Weeks</li>
+                <li><strong>Project URL</strong>: <ul>
+                  <li><a href="https://colab.research.google.com/drive/146TsBpYcW9pgrvKqF_gkvH4WwzqDDHMo?usp=sharing" target="_blank">NeuralNet With SMOTE - 82%</a></li>
+                  <li><a href="https://colab.research.google.com/drive/1uF6eLRsUs6QcQZzDmOhhy-heGsR2ewNI?usp=sharing" target="_blank">NeuralNet With Ensamble - 81%</a></li>  
+                  <li><a href="https://colab.research.google.com/drive/1pZUkVXh6CiEUvwQ9nlhtaRW1VM8lem5F?usp=sharing" target="_blank">NeuralNet - 81%</a></li>
+                </ul></li>
+              </ul>
+            </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="portfolio-description">
+                <h2>Project Detail</h2>
+                <p>Customer Churn Prediction is a project that aims to predict which customers will stop subscribing to a service or product, using historical data about customer behavior and characteristics, as well as their churn status. This project can help companies to identify the factors that influence churn, as well as design strategies to increase customer loyalty and retention.</p>
+
+                <p>There are three methods used in this project, namely:</p>
+
+                <ul>
+                <li>Neural net: This method uses artificial neural networks to learn the patterns and relationships between input and output variables. Neural networks can handle complex and non-linear data, as well as have the ability to learn relevant features automatically.</li>
+                <li>Neural net + SMOTE: This method uses the same neural network as the previous method, but with the addition of the SMOTE technique. SMOTE is a technique to balance the imbalanced classes in the data, by creating synthetic samples from the minority class. Thus, the neural network can learn from more representative data and reduce the bias towards the majority class.</li>
+                <li>Neural net + SMOTE + Ensamble: This method uses the same neural network as the previous method, but with the addition of the ensamble technique. Ensamble is a technique to combine multiple machine learning models into one model that is more powerful and accurate. Thus, the neural network can reduce the variance and overfitting, as well as improve the generalization and robustness.</li>
+                </ul>
+
+                <p>The following are the main steps of the project:</p>
+
+                <ol>
+                <li>Data Preprocessing: The data is cleaned and transformed, by dropping irrelevant or redundant columns, converting categorical variables into dummy variables, splitting the data into train and test sets, separating the target variable from the input variables, and standardizing the input variables.</li>
+                <li>Model Neural Net: A neural network model is defined and trained, using four layers of neurons, batch normalization and dropout techniques, the 'binary_crossentropy' loss function, the 'RMSprop' optimizer, and the 'accuracy' metric.</li>
+                <li>SMOTE: The SMOTE technique is applied to the train data, using the <code>SMOTE</code> function, with a sampling strategy of 0.46 and a number of nearest neighbors of 10.</li>
+                <li>Ensamble: Two models are trained on the train data that has been oversampled by SMOTE: the same neural network model as before, and an XGBoost model. The two models are then used to make predictions on the test data, and the predictions are stacked together. A final model is created using the <code>GradientBoostingClassifier</code> function, and trained on the stacked predictions and the test output variable. The final model is then used to make predictions on the test data, using the stacked predictions as the input.</li>
+                </ol>
+
+                <p>The following are the accuracy results of the three methods, using the precision, recall, f1-score, and support metrics:</p>
+
+                <ul>
+                <li>Neural net: The neural network model achieved an accuracy of 0.81 on the test data, with a precision of 0.61, a recall of 0.58, and an f1-score of 0.60 for the positive class (churned customers). The model performed better on the negative class (non-churned customers), with a precision of 0.87, a recall of 0.88, and an f1-score of 0.87.</li>
+                <li>Neural net + SMOTE: The neural network model with SMOTE achieved an accuracy of 0.82 on the test data, with a precision of 0.61, a recall of 0.65, and an f1-score of 0.63 for the positive class. The model also performed better on the negative class, with a precision of 0.89, a recall of 0.87, and an f1-score of 0.88.</li>
+                <li>Neural net + SMOTE + Ensamble: The neural network model with SMOTE and ensamble achieved an accuracy of 0.81 on the test data, with a precision of 0.61, a recall of 0.63, and an f1-score of 0.62 for the positive class. The model also performed better on the negative class, with a precision of 0.88, a recall of 0.87, and an f1-score of 0.88.</li>
+                </ul>
+
+                <p>From the results, it can be seen that the three methods have similar accuracy scores, but the neural network model with SMOTE has slightly higher recall and f1-score for the positive class, which means that it can identify more churned customers correctly. However, the neural network model with SMOTE and ensamble has slightly higher precision for the positive class, which means that it can reduce more false positives. Therefore, the best method depends on the trade-off between precision and recall, and the business objective of the project.</p>
+              </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
